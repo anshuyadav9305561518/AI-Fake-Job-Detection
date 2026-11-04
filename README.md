@@ -1,93 +1,72 @@
-# 🤖 AI-Based Fake Job Detection System
+# 🔍 AI-Based Fake Job Detection System
+
+### Machine Learning Project | NLP | Python | Streamlit
+
+An AI-powered web application that identifies potentially fraudulent job postings using Natural Language Processing (NLP) and Machine Learning.
+
+## 🚀 Live Demo
+
+Try the application here:
+
+https://ai-fake-job-detection-k27uksxfabtnaf3rz8u6r6.streamlit.app/
 
 ## 📌 Project Overview
 
-This project is an AI-Based Fake Job Detection System developed using Python, Machine Learning, and Natural Language Processing (NLP).
+Online job fraud is a growing problem. This project uses Machine Learning to analyze job descriptions and predict whether a job posting is Genuine or potentially Fake.
 
-The system analyzes job descriptions and predicts whether a job posting is Genuine or Fake.
-
-## 🎯 Project Objectives
-
-* Detect fraudulent job postings.
-* Analyze job descriptions using NLP.
-* Apply TF-IDF Vectorization.
-* Train and compare Machine Learning models.
-* Predict whether a job is genuine or fake.
+Users can enter job details and receive a prediction with model-estimated scores.
 
 ## 🛠️ Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* NLTK
-* Matplotlib
-* Seaborn
-* Joblib
-* TF-IDF Vectorization
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- NLTK
+- TF-IDF Vectorization
+- Logistic Regression
+- Random Forest
+- Streamlit
+- Matplotlib
+- Seaborn
 
-## 📊 Dataset Information
+## ⚙️ Project Workflow
 
-* Total Records: 17,880
-* Total Features: 18
-* Genuine Jobs: 17,014
-* Fake Jobs: 866
+1. Data Collection
+2. Data Cleaning
+3. Exploratory Data Analysis
+4. Text Preprocessing
+5. Natural Language Processing
+6. TF-IDF Feature Extraction
+7. Model Training
+8. Model Evaluation
+9. Model Deployment using Streamlit
 
 ## 🤖 Machine Learning Models
 
-1. Logistic Regression
-2. Random Forest Classifier
+Two models were trained and evaluated:
 
-## 📈 Model Performance
+| Model | Accuracy | Fake Job Recall |
+|---|---:|---:|
+| Logistic Regression | 96.90% | 90.80% |
+| Random Forest | 98.18% | 65.30% |
 
-| Metric             | Logistic Regression | Random Forest |
-| ------------------ | ------------------: | ------------: |
-| Accuracy           |              96.90% |        98.18% |
-| Fake Job Precision |               62.3% |         95.8% |
-| Fake Job Recall    |               90.8% |         65.3% |
-| Fake Job F1 Score  |               73.9% |         77.7% |
+### Final Model: Logistic Regression
 
-### Final Model Selection
+Logistic Regression was selected because it achieved higher recall for fake job postings, helping identify more potentially fraudulent listings.
 
-Logistic Regression was selected as the final model because it achieved higher recall (90.8%) for detecting fake job postings.
+## 📊 Model Evaluation
 
-## ⚙️ Project Features
+Logistic Regression Confusion Matrix:
 
-* Data Cleaning and Preprocessing
-* Duplicate Removal
-* Stopwords Removal
-* Text Processing using NLP
-* TF-IDF Feature Extraction
-* Machine Learning Model Training
-* Model Comparison
-* Fake Job Prediction
-* Model Saving using Joblib
+| | Predicted Genuine | Predicted Fake |
+|---|---:|---:|
+| Actual Genuine | 3308 | 95 |
+| Actual Fake | 16 | 157 |
 
-## 📁 Project Files
+## 💻 Run Locally
 
-* `Fake_Job_Detection.py` – Main Python code
-* `DataSet.csv` – Original dataset
-* `NLP_Cleaned_Data.csv` – Cleaned text dataset
-* `logistic_regression_model.pkl` – Trained Logistic Regression model
-* `tfidf_vectorizer.pkl` – Saved TF-IDF vectorizer
+Clone the repository:
 
-## 🚀 Future Improvements
-
-* Develop a Streamlit web application.
-* Improve model performance.
-* Add real-time job posting detection.
-* Use advanced NLP techniques.
-
-## 👨‍💻 Author
-
-**Anshu Yadav**
-
-Aspiring Data Analyst | Machine Learning Enthusiast
-
-* GitHub: https://github.com/anshuyadav9305561518
-* LinkedIn: https://linkedin.com/in/anshu-yadav-a57917289
-* Portfolio: https://anshuyadav9305561518.github.io/Portfolio-/
-
----
-
-⭐ Thank you for visiting my project!
+```bash
+git clone https://github.com/anshuyadav9305561518/AI-Fake-Job-Detection.git
